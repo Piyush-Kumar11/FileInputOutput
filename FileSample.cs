@@ -29,7 +29,6 @@ namespace FileInputOutput
             {
                 file.Close();
             }
-            
         }
 
         public void FileExistence()
