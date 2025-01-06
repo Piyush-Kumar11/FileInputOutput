@@ -118,5 +118,54 @@ namespace FileInputOutput
             }
         }
 
+        public void AnalyzeFileContent()
+        {
+            try
+            {
+                using (StreamReader reader = new StreamReader(path))
+                {
+                    int lineCount = 0, wordCount = 0, charCount = 0;
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        lineCount++;
+                        wordCount += line.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+                        charCount += line.Length;
+                    }
+                    Console.WriteLine($"Lines: {lineCount}, Words: {wordCount}, Characters: {charCount}");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+        }
+
+        public void CreateDirectoryAndFiles()
+        {
+            string directoryPath = @"C:\Users\Piyush\Desktop\C# Programs\FileInputOutput\NewDirectory";
+            try
+            {
+                //Creates a new directory
+                Directory.CreateDirectory(directoryPath);
+                for (int i = 1; i <= 2; i++)
+                {
+                    //combine files into the directory
+                    string filePath = Path.Combine(directoryPath, $"File{i}.txt");
+
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        writer.WriteLine($"This is content for File {i}");
+                    }
+                }
+                Console.WriteLine("Directory and files created successfully.");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+        }
+
+
     }
 }

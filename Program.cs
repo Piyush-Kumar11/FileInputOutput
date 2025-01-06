@@ -21,10 +21,11 @@ namespace FileInputOutput
             StreamRWSample stream = new StreamRWSample();
             //stream.WriteIntoAFile();
             //stream.ReadFromAFile();
-            stream.ReadFileWithBuffer();
+            //stream.ReadFileWithBuffer();
             //stream.AppendToAFile();
             //stream.ReadEntireFile();
-
+            //stream.AnalyzeFileContent();
+            stream.CreateDirectoryAndFiles();
 
         }
     }
