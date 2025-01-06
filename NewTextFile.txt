@@ -1,0 +1,3 @@
+Hello This is a normal text file!!!
+This text is appended!
+This text is appended!
