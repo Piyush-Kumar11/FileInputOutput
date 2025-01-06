@@ -1,0 +1,6 @@
+hey line number one
+this is the second line
+and now comes the third
+fourth may be the last one!
+Appending in to the file
+2nd line in appending demo!

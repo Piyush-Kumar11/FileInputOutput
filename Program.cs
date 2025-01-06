@@ -18,6 +18,14 @@ namespace FileInputOutput
             //file.FileAppend();
             //file.FileInformation();
 
+            StreamRWSample stream = new StreamRWSample();
+            //stream.WriteIntoAFile();
+            //stream.ReadFromAFile();
+            stream.ReadFileWithBuffer();
+            //stream.AppendToAFile();
+            //stream.ReadEntireFile();
+
+
         }
     }
 }
